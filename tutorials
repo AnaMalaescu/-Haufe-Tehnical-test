@@ -5,3 +5,5 @@ Node.js: https://hub.docker.com/_/node
 Nginx: https://hub.docker.com/_/nginx
 
 HapiJS: https://simpleprogrammer.com/introduction-hapijs/
+
+Docker compose: https://medium.com/@kahana.hagai/docker-compose-with-node-js-and-mongodb-dbdadab5ce0a
