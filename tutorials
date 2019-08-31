@@ -7,3 +7,7 @@ Nginx: https://hub.docker.com/_/nginx
 HapiJS: https://simpleprogrammer.com/introduction-hapijs/
 
 Docker compose: https://medium.com/@kahana.hagai/docker-compose-with-node-js-and-mongodb-dbdadab5ce0a
+
+
+Ran into some problems with MongoDB - connection refused
+solved, using stackoverflow: https://stackoverflow.com/questions/46523321/mongoerror-connect-econnrefused-127-0-0-127017
