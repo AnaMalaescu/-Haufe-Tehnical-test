@@ -1,0 +1,30 @@
+What is Docker and how does it work?
+-> Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+Containers allow a developer to package up an application with all of the parts it needs, 
+such as libraries and other dependencies, and ship it all out as one package.
+
+Why should I use docker?
+-> Docker enables you to rapidly deploy server environments in “containers.” ... 
+While Docker utilizes the virtualization technology in the Linux kernel, it does not create virtual machines 
+(in fact, if you run Docker on MacOS or Windows, you'll have to run it on a virtual machine).
+-> Docker allows engineering teams to be smaller and more effective. 
+Docker containers ensure consistency across multiple development, release cycles and standardising your environment. 
+One of the biggest advantages to a Docker-based architecture is actually standardization.
+
+When to use Docker?
+-> Docker is a basic tool, like git or java, that you should start incorporating into your daily development and ops practices.
+-> Use Docker as version control system for your entire app's operating system
+-> Use Docker when you want to distribute/collaborate on your app's operating system with a team
+-> Use Docker to run your code on your laptop in the same environment as you have on your server (try the building tool)
+-> Use Docker whenever your app needs to go through multiple phases of development (dev/test/qa/prod, try Drone or 
+   Shippable, both do Docker CI/CD)
+-> Use Docker with your Chef Cookbooks and Puppet Manifests (remember, Docker doesn't do configuration management)
+
+What is a docker container?
+-> a standardized unit of software
+
+What is the difference between a docker container and a virtual machine?
+-> containers virtualize the operating system instead of hardware
+-> Containers take up less space than VMs (container images are typically tens of MBs in size), 
+can handle more applications and require fewer VMs and Operating systems.
+
