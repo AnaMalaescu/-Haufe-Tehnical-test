@@ -16,3 +16,5 @@ solved, using stackoverflow: https://stackoverflow.com/questions/46523321/mongoe
 ====> update: nevermind, I don't know how to add mongoBD in a docker --> will have to create a mongoDB image using CLI
 
 MongoDB capped collection: https://docs.mongodb.com/manual/core/capped-collections/ 
+
+Totorial for HapiJs and NodeJS: https://auth0.com/blog/developing-modern-apis-with-nodejs-hapijs-and-redis/
