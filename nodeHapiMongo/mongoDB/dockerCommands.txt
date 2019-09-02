@@ -1,0 +1,18 @@
+Install MongoDB: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+Create a docker with a mongoDB image
+docker build -t firstmongodd
+
+See all the images available
+docker ps -a
+
+Run the mongodb image
+docker run -d -p 27017:27017 --name firstmongodd mongo
+
+Docker start mongodb
+docker start firstmongodd
+
+Execute the docker container for mongoDB
+docker exec -it firstmongodd bash
+ - mongo
+ - show dbs
