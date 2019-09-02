@@ -1,4 +1,6 @@
 const Hapi = require('hapi');
+const inert = require('inert');
+
 const server = new Hapi.Server({
     host: 'localhost',
     port: 3101,
@@ -24,7 +26,7 @@ server.route([
         method: 'GET',
         path: '/mongoDB',
         handler: (request, h) => {
-            return h.file('main.html');
+            return h.file('./main.html')
         },
     }
 ]);
@@ -32,6 +34,7 @@ server.route([
 // define server start function
 const launch = async () => {
     try {
+        await server.register(inert);
         await server.start();
     } catch (err) {
         console.error(err);
