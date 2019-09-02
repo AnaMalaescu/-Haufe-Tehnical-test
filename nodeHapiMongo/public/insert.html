@@ -8,29 +8,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+  <title>Add new entry into mongoDB</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+    <h1>Please insert data</h1>
 
     <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <p>Check for database connection</p>
-          <a href="/getdataconn" class="btn btn-secondary">Check db data </a>
+      <form class="form-inline" method="post" action="/addrules">
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" name="rulerName" placeholder="Ruler">
+
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Country</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+          </div>
+          <input type="text" class="form-control" name="country" id="inlineFormInputGroupUsername2" placeholder="Country">
         </div>
-        <div class="col-sm">
-          <p>Loading button click data.</p>
-          <a href="/getrulers" class="btn btn-secondary">Show db data </a>
-        </div>
-        <div class="col-sm">
-          <p>Add data into mongoDB</p>
-          <a href="/insert.html" class="btn btn-secondary">Add data </a>
-        </div>
-      </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>
    </div>
 
-    <!-- <script src='client.js' type='text/javascript'></script> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
