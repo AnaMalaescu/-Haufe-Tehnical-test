@@ -21,13 +21,38 @@ mongodb.connect(url, (err, database) => {
     return console.log(err);
   }
   db = database;
+
   // start the express web server listening on 3101
   app.listen(3101, () => {
     console.log('listening on 3101');
   });
+
 });
 
 // serve the homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/main.html');
+});
+
+app.post('/clicked', (req, res) => {
+
+  var dbo = db.db("history");
+  dbo.collection("rulers").findOne({}, function(err, result)
+    {
+      if (err) throw err;
+      console.log(result.name);
+      console.log(result.country);
+      db.close();
+    });
+  res.sendStatus(201);
+});
+
+// get the click data from the database
+app.get('/clicks', (req, res) => {
+
+  var dbo = db.db("history");
+  dbo.collection('rulers').find().toArray((err, result) => {
+    if (err) return console.log(err);
+    res.send(result);
+  });
 });
